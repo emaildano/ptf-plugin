@@ -11,7 +11,7 @@ License: All rights reserved. Not for resale, reuse, or distribution.
 
 spl_autoload_register('class_autoload');
 function class_autoload($classname) {
-    $filename = $_SERVER['DOCUMENT_ROOT'] . "/wp-content/plugins/phillytapfinder/classes/$classname.class.php";
+    $filename = $_SERVER['DOCUMENT_ROOT'] . "/wp-content/plugins/ptf-plugin/classes/$classname.class.php";
 
     if (file_exists($filename)) {
         require_once "$filename";
@@ -222,8 +222,8 @@ function createContentTypes() {
 }
 
 function addScripts() {
-    wp_enqueue_script("ss-plugins", plugins_url() . "/phillytapfinder/js/plugins.js", array() , "3", true);
-    wp_enqueue_script("ss-ajax", plugins_url() . "/phillytapfinder/js/phillytapfinder.js", array() , "3", true);
+    wp_enqueue_script("ss-plugins", plugins_url() . "/ptf-plugin/js/plugins.js", array() , "3", true);
+    wp_enqueue_script("ss-ajax", plugins_url() . "/ptf-plugin/js/phillytapfinder.js", array() , "3", true);
 }
 
 add_action('init', 'createTaxonomies', 0);

@@ -56,7 +56,7 @@ class Import {
 	//upload neighborhoods, delete all terms in taxonomy first
 	protected function uploadHoods(){
 		$this->hoodCount = 0;
-		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/phillytapfinder/data/", 'hoodcsv');
+		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/ptf-plugin/data/", 'hoodcsv');
 
 		if($upload->success){
 			$handleFile = fopen($upload->handle, "r");
@@ -77,7 +77,7 @@ class Import {
 	//upload beer styles, delete all terms in taxonomy first
 	protected function uploadStyles(){
 		$this->styleCount = 0;
-		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/phillytapfinder/data/", 'stylecsv');
+		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/ptf-plugin/data/", 'stylecsv');
 
 		if($upload->success){
 			$handleFile = fopen($upload->handle, "r");
@@ -102,7 +102,7 @@ class Import {
 	protected function uploadBreweries(){
 		$this->brewCount = 0;
 		$this->breweries = array();
-		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/phillytapfinder/data/", 'breweriesscsv');
+		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/ptf-plugin/data/", 'breweriesscsv');
 
 		if($upload->success){
 			$handleFile = fopen($upload->handle, "r");
@@ -127,7 +127,7 @@ class Import {
 	//upload beers, delete all posts in custom content type first
 	protected function uploadBeers(){
 		$this->beerCount = 0;
-		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/phillytapfinder/data/", 'beerscsv');
+		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/ptf-plugin/data/", 'beerscsv');
 
 		if($upload->success){
 			$handleFile = fopen($upload->handle, "r");
@@ -178,7 +178,7 @@ class Import {
 	//upload beers, delete all posts in custom content type first
 	protected function uploadBars(){
 		$this->barCount = 0;
-		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/phillytapfinder/data/", 'barscsv');
+		$upload = new FileUpload($_SERVER['DOCUMENT_ROOT']. "/wp-content/plugins/ptf-plugin/data/", 'barscsv');
 
 		if($upload->success){
 			$handleFile = fopen($upload->handle, "r");
