@@ -56,7 +56,7 @@ class Search {
 				ID,
 				post_title
 				FROM
-				pt7wp_posts
+				wp_posts
 				WHERE post_type = 'ptf_beers'
 				AND post_status = 'publish'
 				AND ((post_title LIKE '%$search%') OR  (post_content LIKE '%$search%'))
@@ -88,7 +88,7 @@ class Search {
 				ID,
 				post_title
 				FROM
-				pt7wp_posts
+				wp_posts
 				WHERE post_type = 'ptf_beers'
 				AND post_status = 'publish'
 				AND (post_content LIKE '%$search%')
@@ -105,8 +105,8 @@ class Search {
 				t.name,
 				t.slug
 				FROM
-				pt7wp_term_taxonomy x,
-				pt7wp_terms t
+				wp_term_taxonomy x,
+				wp_terms t
 				WHERE x.taxonomy = 'ptf_beer_style'
 				AND description LIKE '%$search%'
 				AND x.term_id = t.term_id
@@ -138,8 +138,8 @@ class Search {
 				t.slug,
 				x.term_taxonomy_id
 				FROM
-				pt7wp_term_taxonomy x,
-				pt7wp_terms t
+				wp_term_taxonomy x,
+				wp_terms t
 				WHERE x.taxonomy = 'ptf_beer_style'
 				AND x.term_id = t.term_id
 				AND t.name LIKE '%$search%'
@@ -166,7 +166,7 @@ class Search {
 						SELECT
 						object_id
 						FROM
-						pt7wp_term_relationships
+						wp_term_relationships
 						WHERE term_taxonomy_id = '$res->term_taxonomy_id'
 					";
 
@@ -181,7 +181,7 @@ class Search {
 				ID,
 				post_title
 				FROM
-				pt7wp_posts
+				wp_posts
 				WHERE post_type = 'ptf_bars'
 				AND post_status = 'publish'
 				AND (post_title LIKE '%$search%' OR post_content LIKE '%$search%')
@@ -211,8 +211,8 @@ class Search {
 				t.name,
 				t.slug
 				FROM
-				pt7wp_term_taxonomy x,
-				pt7wp_terms t
+				wp_term_taxonomy x,
+				wp_terms t
 				WHERE x.taxonomy = 'ptf_hoods'
 				AND x.term_id = t.term_id
 				AND t.name LIKE '%$search%'
@@ -241,7 +241,7 @@ class Search {
 				SELECT
 				meta_value
 				FROM
-				pt7wp_postmeta
+				wp_postmeta
 				WHERE meta_key = 'beers'
 			";
 

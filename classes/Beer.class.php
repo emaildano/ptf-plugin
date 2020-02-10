@@ -86,7 +86,7 @@ class Beer {
 		post_name as slug,
 		ID as id
 		FROM
-		pt7wp_posts
+		wp_posts
 		WHERE
 		post_type = 'ptf_beers'
 		AND post_status = 'publish'
@@ -200,10 +200,10 @@ class Beer {
 			p.ID,
 			p.post_title
 			FROM
-			pt7wp_posts p,
-			pt7wp_term_taxonomy t,
-			pt7wp_terms term,
-			pt7wp_term_relationships r
+			wp_posts p,
+			wp_term_taxonomy t,
+			wp_terms term,
+			wp_term_relationships r
 			WHERE post_type = 'ptf_beers'
 			AND term.slug = '$slug'
 			AND t.taxonomy = 'ptf_breweries'
@@ -322,7 +322,7 @@ class Beer {
 		post_name as slug,
 		ID as id
 		FROM
-		pt7wp_posts
+		wp_posts
 		WHERE
 		post_type = 'ptf_beers'
 		AND post_status = 'publish'

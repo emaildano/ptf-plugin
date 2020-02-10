@@ -93,8 +93,8 @@ class Event {
 			ID as id,
 			m.meta_value as date
 			FROM
-			pt7wp_posts p,
-			pt7wp_postmeta m
+			wp_posts p,
+			wp_postmeta m
 			WHERE
 			p.post_type = 'ptf_events'
 			AND p.post_status = 'publish'
@@ -158,8 +158,8 @@ class Event {
 			SELECT
 			post_id as id
 			FROM
-			pt7wp_postmeta m,
-			pt7wp_posts p
+			wp_postmeta m,
+			wp_posts p
 			WHERE
 			m.meta_key = 'beers'
 			AND m.post_id = p.ID
@@ -204,8 +204,8 @@ class Event {
 			SELECT
 			post_id as id
 			FROM
-			pt7wp_postmeta m,
-			pt7wp_posts p
+			wp_postmeta m,
+			wp_posts p
 			WHERE
 			m.meta_key = 'bar'
 			AND m.post_id = p.ID

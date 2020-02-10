@@ -172,7 +172,7 @@ class Bar {
 			ID as id,
 			post_modified as updated
 			FROM
-			pt7wp_posts
+			wp_posts
 			WHERE
 			post_type = 'ptf_bars'
 			AND post_status = 'publish'
@@ -189,7 +189,7 @@ class Bar {
 			post_name as slug,
 			ID as id
 			FROM
-			pt7wp_posts
+			wp_posts
 			WHERE
 			post_type = 'ptf_bars'
 			AND post_status = 'publish'
@@ -246,8 +246,8 @@ class Bar {
 			SELECT
 			post_id as id
 			FROM
-			pt7wp_postmeta m,
-			pt7wp_posts p
+			wp_postmeta m,
+			wp_posts p
 			WHERE
 			m.meta_key = 'beers'
 			AND m.post_id = p.ID
@@ -283,8 +283,8 @@ class Bar {
 			m.post_id as id,
 			p.post_type
 			FROM
-			pt7wp_posts p,
-			pt7wp_postmeta m
+			wp_posts p,
+			wp_postmeta m
 			WHERE
 			p.ID = m.post_id
 			AND m.meta_key = 'beers'
@@ -327,7 +327,7 @@ class Bar {
 				SELECT
 				post_id as id
 				FROM
-				pt7wp_postmeta as m
+				wp_postmeta as m
 				WHERE
 				meta_key = 'beers'
 				AND m.meta_value LIKE '%" . $id . "%'
