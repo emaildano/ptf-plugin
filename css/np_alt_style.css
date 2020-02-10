@@ -1,0 +1,8 @@
+.acf_relationship .relationship_left, .acf_relationship .relationship_right, .acf_relationship .relationship_left .relationship_list{
+
+}
+
+.acf_relationship .relationship_right .relationship_list{
+	height:auto !important;
+}
+
