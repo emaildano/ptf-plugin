@@ -96,7 +96,7 @@ class Beer {
 		 * Gets every value from every entry of the "beers" custom field,
 		 * then breaks it down to a single array of beers that have been
 		 * related to a bar (i.e. "tapped").
-		 * This filters the beers feteched to include only what's available on tap.
+		 * This filters the beers fetched to include only what's available on tap.
 		 */
 		global $wpdb;
 		$getRelatedBeers = $wpdb->get_col("SELECT meta_value FROM $wpdb->postmeta WHERE meta_key = 'beers'" );
