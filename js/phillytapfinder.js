@@ -177,7 +177,7 @@ jQuery(document).ready(function($) {
   // PTFAds.prototype.showLeaderboard = function() {
   //   var that = this;
   //   console.log("displaying leaderboard ad");
-	// 	console.log(that.data);
+  // 	console.log(that.data);
   //   window.ga("send", "event", "Ad", "Viewed", decodeHtml(that.data.ad_title));
   //   $("#ad-leaderboard-tmpl")
   //     .tmpl(that.data)
