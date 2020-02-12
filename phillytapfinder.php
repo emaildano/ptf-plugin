@@ -19,206 +19,206 @@ function class_autoload($classname) {
 }
 
 function createTaxonomies() {
-    register_taxonomy('ptf_hoods', 'ptf_bars', array(
-        'hierarchical' => true,
-        'label' => 'Neighborhoods',
-        'rewrite' => array(
-            'slug' => 'hood'
-        )
-    ));
-    register_taxonomy('ptf_beer_style', 'ptf_beer', array(
-        'hierarchical' => true,
-        'label' => 'Styles',
-        'rewrite' => array(
-            'slug' => 'style'
-        )
-    ));
-    register_taxonomy('ptf_breweries', 'ptf_beer', array(
-        'hierarchical' => true,
-        'label' => 'Breweries',
-        'rewrite' => array(
-            'slug' => 'brewery'
-        )
-    ));
+    // register_taxonomy('ptf_hoods', 'ptf_bars', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Neighborhoods',
+    //     'rewrite' => array(
+    //         'slug' => 'hood'
+    //     )
+    // ));
+    // register_taxonomy('ptf_beer_style', 'ptf_beer', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Styles',
+    //     'rewrite' => array(
+    //         'slug' => 'style'
+    //     )
+    // ));
+    // register_taxonomy('ptf_breweries', 'ptf_beer', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Breweries',
+    //     'rewrite' => array(
+    //         'slug' => 'brewery'
+    //     )
+    // ));
 
-    register_taxonomy('ptf_beer_featured', 'ptf_beer', array(
-        'hierarchical' => true,
-        'label' => 'Featured Beer'
-    ));
-    register_taxonomy('ptf_bar_featured', 'ptf_bar', array(
-        'hierarchical' => true,
-        'label' => 'Featured Bar'
-    ));
-    register_taxonomy('ptf_brewery_featured', 'ptf_breweries', array(
-        'hierarchical' => true,
-        'label' => 'Featured Brewery'
-    ));
-    register_taxonomy('ptf_ad_overrides', 'ptf_ads', array(
-        'hierarchical' => true,
-        'label' => 'Advertisement Placement Overrides'
-    ));
+    // register_taxonomy('ptf_beer_featured', 'ptf_beer', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Featured Beer'
+    // ));
+    // register_taxonomy('ptf_bar_featured', 'ptf_bar', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Featured Bar'
+    // ));
+    // register_taxonomy('ptf_brewery_featured', 'ptf_breweries', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Featured Brewery'
+    // ));
+    // register_taxonomy('ptf_ad_overrides', 'ptf_ads', array(
+    //     'hierarchical' => true,
+    //     'label' => 'Advertisement Placement Overrides'
+    // ));
 }
 
 function createContentTypes() {
-    register_post_type('ptf_bars', array(
-        'labels' => array(
-            'name' => __('Bars') ,
-            'singular_name' => __('Bar') ,
-            'add_new' => __('Add Bar') ,
-            'add_new_item' => __('Add New Bar') ,
-            'edit_item' => __('Edit Bar') ,
-            'update_item' => __('Update Bar') ,
-        ) ,
-        'rewrite' => array(
-            'slug' => 'bar'
-        ) ,
-        'taxonomies' => array(
-            'ptf_hoods',
-            'ptf_beer_tax',
-            'ptf_bar_featured'
-        ) ,
-        'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'page-attributes'
-        ) ,
-        'public' => true,
-        'menu_position' => 40,
-        'show_in_rest' => true
-    ));
+    // register_post_type('ptf_bars', array(
+    //     'labels' => array(
+    //         'name' => __('Bars') ,
+    //         'singular_name' => __('Bar') ,
+    //         'add_new' => __('Add Bar') ,
+    //         'add_new_item' => __('Add New Bar') ,
+    //         'edit_item' => __('Edit Bar') ,
+    //         'update_item' => __('Update Bar') ,
+    //     ) ,
+    //     'rewrite' => array(
+    //         'slug' => 'bar'
+    //     ) ,
+    //     'taxonomies' => array(
+    //         'ptf_hoods',
+    //         'ptf_beer_tax',
+    //         'ptf_bar_featured'
+    //     ) ,
+    //     'supports' => array(
+    //         'title',
+    //         'editor',
+    //         'author',
+    //         'thumbnail',
+    //         'excerpt',
+    //         'trackbacks',
+    //         'custom-fields',
+    //         'comments',
+    //         'page-attributes'
+    //     ) ,
+    //     'public' => true,
+    //     'menu_position' => 40,
+    //     'show_in_rest' => true
+    // ));
 
-    register_post_type('ptf_events', array(
-        'labels' => array(
-            'name' => __('Events') ,
-            'singular_name' => __('Event') ,
-            'add_new' => __('Add Event') ,
-            'add_new_item' => __('Add New Event') ,
-            'edit_item' => __('Edit Event') ,
-            'update_item' => __('Update Event') ,
-        ) ,
-        'rewrite' => array(
-            'slug' => 'event'
-        ) ,
-        'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'page-attributes'
-        ) ,
-        'public' => true,
-        'menu_position' => 40,
-        'show_in_rest' => true
-    ));
+    // register_post_type('ptf_events', array(
+    //     'labels' => array(
+    //         'name' => __('Events') ,
+    //         'singular_name' => __('Event') ,
+    //         'add_new' => __('Add Event') ,
+    //         'add_new_item' => __('Add New Event') ,
+    //         'edit_item' => __('Edit Event') ,
+    //         'update_item' => __('Update Event') ,
+    //     ) ,
+    //     'rewrite' => array(
+    //         'slug' => 'event'
+    //     ) ,
+    //     'supports' => array(
+    //         'title',
+    //         'editor',
+    //         'author',
+    //         'thumbnail',
+    //         'excerpt',
+    //         'trackbacks',
+    //         'custom-fields',
+    //         'comments',
+    //         'page-attributes'
+    //     ) ,
+    //     'public' => true,
+    //     'menu_position' => 40,
+    //     'show_in_rest' => true
+    // ));
 
-    register_post_type('ptf_beers', array(
-        'labels' => array(
-            'name' => __('Beers') ,
-            'singular_name' => __('Beer') ,
-            'add_new' => __('Add Beer') ,
-            'add_new_item' => __('Add New Beer') ,
-            'edit_item' => __('Edit Beer') ,
-            'update_item' => __('Update Beer') ,
-        ) ,
-        'rewrite' => array(
-            'slug' => 'beer'
-        ) ,
-        'taxonomies' => array(
-            'ptf_beer_style',
-            'ptf_breweries',
-            'ptf_beer_featured'
-        ) ,
-        'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'page-attributes',
-            'revisions'
-        ) ,
-        'public' => true,
-        'menu_position' => 40,
-        'show_in_rest' => true
-    ));
+    // register_post_type('ptf_beers', array(
+    //     'labels' => array(
+    //         'name' => __('Beers') ,
+    //         'singular_name' => __('Beer') ,
+    //         'add_new' => __('Add Beer') ,
+    //         'add_new_item' => __('Add New Beer') ,
+    //         'edit_item' => __('Edit Beer') ,
+    //         'update_item' => __('Update Beer') ,
+    //     ) ,
+    //     'rewrite' => array(
+    //         'slug' => 'beer'
+    //     ) ,
+    //     'taxonomies' => array(
+    //         'ptf_beer_style',
+    //         'ptf_breweries',
+    //         'ptf_beer_featured'
+    //     ) ,
+    //     'supports' => array(
+    //         'title',
+    //         'editor',
+    //         'author',
+    //         'thumbnail',
+    //         'excerpt',
+    //         'trackbacks',
+    //         'custom-fields',
+    //         'comments',
+    //         'page-attributes',
+    //         'revisions'
+    //     ) ,
+    //     'public' => true,
+    //     'menu_position' => 40,
+    //     'show_in_rest' => true
+    // ));
 
-    register_post_type('ptf_breweries_meta', array(
-        'labels' => array(
-            'name' => __('Brewery Info') ,
-            'singular_name' => __('Brewery Info') ,
-            'add_new' => __('Add Brewery Info') ,
-            'add_new_item' => __('Add New Brewery Info') ,
-            'edit_item' => __('Edit Brewery Info') ,
-            'update_item' => __('Update Brewery Info') ,
-        ) ,
-        'rewrite' => array(
-            'slug' => 'ptf-breweries-meta'
-        ) ,
-        'taxonomies' => array(
-            'ptf_breweries',
-            'ptf_brewery_featured'
-        ) ,
-        'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'page-attributes'
-        ) ,
-        'public' => true,
-        'show_ui' => true,
-        'rewrite' => array(
-            'slug' => 'brewery'
-        ) ,
-        'publicly_queryable' => 'false',
-        'menu_position' => 40,
-        'show_in_rest' => true
-    ));
+    // register_post_type('ptf_breweries_meta', array(
+    //     'labels' => array(
+    //         'name' => __('Brewery Info') ,
+    //         'singular_name' => __('Brewery Info') ,
+    //         'add_new' => __('Add Brewery Info') ,
+    //         'add_new_item' => __('Add New Brewery Info') ,
+    //         'edit_item' => __('Edit Brewery Info') ,
+    //         'update_item' => __('Update Brewery Info') ,
+    //     ) ,
+    //     'rewrite' => array(
+    //         'slug' => 'ptf-breweries-meta'
+    //     ) ,
+    //     'taxonomies' => array(
+    //         'ptf_breweries',
+    //         'ptf_brewery_featured'
+    //     ) ,
+    //     'supports' => array(
+    //         'title',
+    //         'editor',
+    //         'author',
+    //         'thumbnail',
+    //         'excerpt',
+    //         'trackbacks',
+    //         'custom-fields',
+    //         'comments',
+    //         'page-attributes'
+    //     ) ,
+    //     'public' => true,
+    //     'show_ui' => true,
+    //     'rewrite' => array(
+    //         'slug' => 'brewery'
+    //     ) ,
+    //     'publicly_queryable' => 'false',
+    //     'menu_position' => 40,
+    //     'show_in_rest' => true
+    // ));
 
-    register_post_type('ptf_ads', array(
-        'labels' => array(
-            'name' => __('Advertisements') ,
-            'singular_name' => __('Advertisement') ,
-            'add_new' => __('Add an Advertisement') ,
-            'add_new_item' => __('Add New Advertisement') ,
-            'edit_item' => __('Edit Advertisement') ,
-            'update_item' => __('Update Advertisement') ,
-        ) ,
-        'rewrite' => array(
-            'slug' => 'ads'
-        ) ,
-        'supports' => array(
-            'title',
-            'editor',
-            'author',
-            'thumbnail',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'page-attributes'
-        ) ,
-        'public' => true,
-        'menu_position' => 40,
-        'show_in_rest' => true
-    ));
+    // register_post_type('ptf_ads', array(
+    //     'labels' => array(
+    //         'name' => __('Advertisements') ,
+    //         'singular_name' => __('Advertisement') ,
+    //         'add_new' => __('Add an Advertisement') ,
+    //         'add_new_item' => __('Add New Advertisement') ,
+    //         'edit_item' => __('Edit Advertisement') ,
+    //         'update_item' => __('Update Advertisement') ,
+    //     ) ,
+    //     'rewrite' => array(
+    //         'slug' => 'ads'
+    //     ) ,
+    //     'supports' => array(
+    //         'title',
+    //         'editor',
+    //         'author',
+    //         'thumbnail',
+    //         'excerpt',
+    //         'trackbacks',
+    //         'custom-fields',
+    //         'comments',
+    //         'page-attributes'
+    //     ) ,
+    //     'public' => true,
+    //     'menu_position' => 40,
+    //     'show_in_rest' => true
+    // ));
 }
 
 function addScripts() {
