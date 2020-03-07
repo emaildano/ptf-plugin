@@ -39,6 +39,16 @@ class Beer {
 
 	//get origin or city, state location of Beer
 	public function getOrigin() {
+		if(!isset($this->brewery)){
+			$this->setBrewery();
+		}
+
+		$term_id = $this->brewery[0]->term_id;
+		$origin = get_field('origin', 'ptf_breweries_' . $term_id);
+		if ($origin) {
+			return $origin;
+		}
+
 		return $this->origin;
 	}
 
